@@ -77,11 +77,3 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # End of https://www.toptal.com/developers/gitignore/api/unity
-Packages/com.ptc.vuforia.engine-10.25.4.tgz
-Packages/manifest.json
-Packages/packages-lock.json
-Packages/packages-lock.json
-Packages/manifest.json
-Assets/Resources/VuforiaConfiguration.asset
-Assets/Editor/Migration/AddVuforiaEnginePackage.cs
-Assets/Editor/Migration/AddVuforiaEnginePackage.cs
