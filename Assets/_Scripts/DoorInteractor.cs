@@ -3,35 +3,24 @@ using UnityEngine;
 public class DoorInteractor : MonoBehaviour
 {
     public bool locked = false;
-    public bool canOpen = true; // Allow opening the door
+    public bool canOpen = true;  // Allow opening the door
     public bool canClose = true; // Allow closing the door
     public bool isOpened = false; // Track the door state (open or closed)
 
     private Rigidbody _rbDoor;
     private HingeJoint _hinge;
+    private JointMotor _motor;
 
     public float maxOpenAngle = 85f; // Max angle for fully opened door
-    public float openSpeed = 100f; // Speed of the door opening (force for motor)
-    private JointMotor _motor;
+    public float openSpeed = 50f;    // Speed of the door opening (degrees per second)
+    public float closeSpeed = 30f;   // Speed of the door closing (degrees per second)
 
     void Start()
     {
         _rbDoor = GetComponent<Rigidbody>();
         _hinge = GetComponent<HingeJoint>();
-
-        JointLimits limits = _hinge.limits;
-        limits.max = maxOpenAngle;
-        limits.min = 0; // Closed position
-        _hinge.limits = limits;
-
-        _motor = new JointMotor
-        {
-            targetVelocity = openSpeed,
-            force = 1000f // Adjust based on your door's mass
-        };
-
-        _hinge.motor = _motor;
-
+        
+        _hinge.useMotor = true; // Enable the motor
     }
 
     void Update()
@@ -59,23 +48,33 @@ public class DoorInteractor : MonoBehaviour
     {
         if (isOpened || !canOpen) return;
         isOpened = true;
-        _hinge.useMotor = true;
-        Debug.Log("Door is opened");
+
+        // Set motor for opening
+        _motor = _hinge.motor;
+        _motor.targetVelocity = openSpeed;
+        _motor.force = 30f;  // Adjust based on your door's mass
+        _hinge.motor = _motor;
+
+        // Set the limits for opening
+        JointLimits limits = _hinge.limits;
+        limits.max = maxOpenAngle;
+        limits.min = 0;
+        _hinge.limits = limits;
+
+        Debug.Log("Door is opening");
     }
 
     private void CloseDoor()
     {
         if (!isOpened || !canClose) return;
         isOpened = false;
-        _hinge.useMotor = false;
-        
-        // Gradually close the door
-        while (_hinge.angle > 0.1f) // Close until it's nearly closed
-        {
-            // Apply torque to close the door
-            _rbDoor.AddRelativeTorque(new Vector3(0, 0, -openSpeed * Time.deltaTime));
-        }
+
+        // Set motor for closing
+        _motor = _hinge.motor;
+        _motor.targetVelocity = -closeSpeed;  // Negative speed to close the door
+        _motor.force = 50f;  // Adjust force based on your door's mass
+        _hinge.motor = _motor;
+
         Debug.Log("Door is closing");
     }
-
 }
