@@ -13,7 +13,7 @@ public class GhostAnimationIdle : MonoBehaviour
     private JumpScareTrigger jumpScareTrigger;
 
     private Animator animator;
-    private bool jumpScareIsPlayed = false;
+    private bool jumpScareIsPlayed;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +43,7 @@ public class GhostAnimationIdle : MonoBehaviour
                 jumpScareIsPlayed = true;
             }
         }
+        Debug.Log("Status of the bool:" + jumpScareIsPlayed);
 
     }
 
