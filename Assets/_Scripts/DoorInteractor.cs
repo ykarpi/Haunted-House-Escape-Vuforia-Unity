@@ -1,85 +1,80 @@
 using UnityEngine;
 
-public class AR_DoorTouchController : MonoBehaviour
+public class DoorInteractor : MonoBehaviour
 {
-    public bool Locked = false;  
-    public bool CanOpen = true;  // Allow opening the door
-    public bool CanClose = true; // Allow closing the door
+    public bool locked = false;
+    public bool canOpen = true; // Allow opening the door
+    public bool canClose = true; // Allow closing the door
     public bool isOpened = false; // Track the door state (open or closed)
-    public float OpenSpeed = 3f;  // Speed of door opening
 
-    // Variables for door physics
-    Rigidbody rbDoor;
-    HingeJoint hinge;
-    JointLimits hingeLim;
-    float currentLim;
+    private Rigidbody _rbDoor;
+    private HingeJoint _hinge;
+
+    public float maxOpenAngle = 85f; // Max angle for fully opened door
+    public float openSpeed = 100f; // Speed of the door opening (force for motor)
+    private JointMotor _motor;
 
     void Start()
     {
-        // Initialize Rigidbody and HingeJoint for the door
-        rbDoor = GetComponent<Rigidbody>();
-        hinge = GetComponent<HingeJoint>();
+        _rbDoor = GetComponent<Rigidbody>();
+        _hinge = GetComponent<HingeJoint>();
+
+        JointLimits limits = _hinge.limits;
+        limits.max = maxOpenAngle;
+        limits.min = 0; // Closed position
+        _hinge.limits = limits;
+
+        _motor = new JointMotor
+        {
+            targetVelocity = openSpeed,
+            force = 1000f // Adjust based on your door's mass
+        };
+
+        _hinge.motor = _motor;
+
     }
 
     void Update()
     {
-        // Detect touch input
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            // Cast a ray from the touch position
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-            RaycastHit hit;
-
-            // Check if the ray hits the door object
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform == transform)  // If the hit object is the door
-                {
-                    Action();  // Trigger door open/close action
-                }
-            }
-        }
-
         // Detect if the "O" key is pressed
         if (Input.GetKeyDown(KeyCode.O))
         {
-            Action();  // Trigger door open/close action
+            ToggleDoor(); // Trigger door open/close action
         }
     }
 
-    public void Action() 
+    private void ToggleDoor()
     {
-        if (!Locked)  // Check if door is not locked
-        {
-            // Opening/closing logic
-            if (isOpened && CanClose)  // If door is open and can close
-            {
-                isOpened = false;  // Close the door
-            }
-            else if (!isOpened && CanOpen)  // If door is closed and can open
-            {
-                isOpened = true;  // Open the door
-                rbDoor.AddRelativeTorque(new Vector3(0, 0, 20f));  // Apply torque to open door
-            }
-        }
-    }
-
-    private void FixedUpdate() 
-    {
-        // Adjust the hinge joint's angle limits based on whether the door is open or closed
         if (isOpened)
         {
-            currentLim = 180f;  // Open door to a max of 120 degrees (increase this for a wider opening)
+            CloseDoor();
         }
         else
         {
-            if (currentLim > 1f)
-                currentLim -= .5f * OpenSpeed;  // Gradually close the door
+            OpenDoor();
         }
-
-        // Set the hinge joint limits based on current limits
-        hingeLim.max = currentLim;
-        hingeLim.min = -currentLim;
-        hinge.limits = hingeLim;
     }
+
+    private void OpenDoor()
+    {
+        if (isOpened || !canOpen) return;
+        isOpened = true;
+        _hinge.useMotor = true;
+        Debug.Log("Door is opened");
+    }
+
+    private void CloseDoor()
+    {
+        if (!isOpened || !canClose) return;
+        isOpened = false;
+        
+        // Gradually close the door
+        while (_hinge.angle > 0.1f) // Close until it's nearly closed
+        {
+            // Apply torque to close the door
+            _rbDoor.AddRelativeTorque(new Vector3(0, 0, -openSpeed * Time.deltaTime));
+        }
+        Debug.Log("Door is closing");
+    }
+
 }
