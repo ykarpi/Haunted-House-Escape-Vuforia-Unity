@@ -11,7 +11,7 @@ public class JumpScareTrigger : MonoBehaviour
 
     [SerializeField] private Image jumpScareImage;
 
-    private bool isPlayed = false;
+    public bool isPlayed = false;
     // Start is called before the first frame update
     void Start()
     {
