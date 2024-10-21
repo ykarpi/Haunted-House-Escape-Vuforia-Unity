@@ -67,6 +67,7 @@ public class DoorInteractor : MonoBehaviour
     {
         if (!isOpened || !canClose) return;
         isOpened = false;
+        _hinge.useMotor = false;
         
         // Gradually close the door
         while (_hinge.angle > 0.1f) // Close until it's nearly closed
