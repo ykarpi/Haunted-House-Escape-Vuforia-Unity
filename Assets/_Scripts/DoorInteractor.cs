@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class AR_DoorTouchController : MonoBehaviour
 {
-    [Tooltip("If it is false, door can't be used")]
-    public bool Locked = false;  // Keep this if you still want to lock the door for other purposes
-    [Space]
+    public bool Locked = false;  
     public bool CanOpen = true;  // Allow opening the door
     public bool CanClose = true; // Allow closing the door
-    [Space]
     public bool isOpened = false; // Track the door state (open or closed)
-    [Range(0f, 4f)]
-    [Tooltip("Speed for door opening, degrees per second")]
     public float OpenSpeed = 3f;  // Speed of door opening
 
     // Variables for door physics
@@ -52,7 +47,7 @@ public class AR_DoorTouchController : MonoBehaviour
         }
     }
 
-    public void Action() // Method to open/close door
+    public void Action() 
     {
         if (!Locked)  // Check if door is not locked
         {
@@ -69,7 +64,7 @@ public class AR_DoorTouchController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate() // Physics-based door control
+    private void FixedUpdate() 
     {
         // Adjust the hinge joint's angle limits based on whether the door is open or closed
         if (isOpened)
