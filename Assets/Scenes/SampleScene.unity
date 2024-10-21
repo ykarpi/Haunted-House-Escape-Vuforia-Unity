@@ -742,6 +742,7 @@ GameObject:
   - component: {fileID: 810256633}
   - component: {fileID: 810256632}
   - component: {fileID: 810256631}
+  - component: {fileID: 810256634}
   m_Layer: 0
   m_Name: SubmitButton
   m_TagString: Untagged
@@ -766,7 +767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 381, y: 108.55}
+  m_AnchoredPosition: {x: 434.4748, y: 445.00348}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810256631
@@ -851,6 +852,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810256629}
   m_CullTransparentMesh: 1
+--- !u!114 &810256634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810256629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03ec96807bf741efb0c914c2a599f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerInputField: {fileID: 1999682478}
+  inputCanvas: {fileID: 2034882490}
+  placeholderText: {fileID: 1220776853}
+  correctAnswer: echo
+  riddleText: {fileID: 1970697133}
+  successTextColor: {r: 0.4764151, g: 1, b: 0.4764151, a: 1}
+  skullObject: {fileID: 2042343729}
 --- !u!1 &825054454
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,7 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -1297,7 +1317,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 692675538}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1395,8 +1415,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.3
-  m_fontSizeBase: 0.3
+  m_fontSize: 0.12
+  m_fontSizeBase: 0.12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1431,7 +1451,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 9.831014, y: 2.2390678, z: 9.818329, w: 2.5785155}
+  m_margin: {x: 9.936661, y: 2.342351, z: 9.923873, w: 2.5785155}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -1518,7 +1538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100.474815, y: 108.54651}
+  m_AnchoredPosition: {x: -47, y: 445}
   m_SizeDelta: {x: 685.1728, y: 82.907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1999682478
@@ -1675,7 +1695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2034882491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1760,6 +1780,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &2042343729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c8dd414ac5394449a26d3fac21af42e, type: 3}
+  m_PrefabInstance: {fileID: 217088818}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
