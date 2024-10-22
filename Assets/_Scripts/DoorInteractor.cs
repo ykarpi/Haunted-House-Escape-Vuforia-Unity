@@ -13,7 +13,6 @@ public class DoorInteractor : MonoBehaviour
         {
             ToggleDoor(); // Trigger door open/close on touch
         }
-
         // Smoothly rotate the door around the local Y-axis
         // Maintain the original X and Z rotation while rotating around the Y-axis
         float targetAngle = isOpened ? openAngle : closeAngle;
