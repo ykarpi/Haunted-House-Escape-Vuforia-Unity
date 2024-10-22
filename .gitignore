@@ -83,3 +83,5 @@ Assets/Editor/Migration/com.ptc.vuforia.engine-10.27.3.tgz
 /Assets/ThirdParty/StreamingAssets
 /Assets/ThirdParty/TextMesh Pro
 /Assets/StreamingAssets
+Assets/VuforiaLicense.cs
+Assets/Resources/VuforiaConfiguration.asset
