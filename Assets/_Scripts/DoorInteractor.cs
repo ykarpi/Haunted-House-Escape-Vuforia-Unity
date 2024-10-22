@@ -5,7 +5,6 @@ public class DoorInteractor : MonoBehaviour
     public float openAngle = 90f;  // Angle for the open position (Y-axis)
     public float closeAngle = 0f;  // Angle for the closed position (Y-axis)
     public float rotationSpeed = 2f;  // Speed of the door rotation
-
     public bool isOpened = false;  // Track whether the door is open or closed
 
     void Update()
