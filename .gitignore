@@ -80,3 +80,6 @@ crashlytics-build.properties
 Assets/Editor/Migration/com.ptc.vuforia.engine-10.27.3.tgz
 /.idea
 /Assets/TextMesh Pro
+/Assets/ThirdParty/StreamingAssets
+/Assets/ThirdParty/TextMesh Pro
+/Assets/StreamingAssets
