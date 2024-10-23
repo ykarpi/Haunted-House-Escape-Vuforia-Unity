@@ -1238,13 +1238,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: RiddleQR
+  mTrackableName: qr_code_skull
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/IMTC_Lab3_Riddle.xml
+  mDataSetPath: Vuforia/Lab3_Assignment_Final.xml
   mAspectRatio: 1
   mImageTargetType: 0
-  mWidth: 0.1
-  mHeight: 0.1
+  mWidth: 2
+  mHeight: 2
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -1264,8 +1264,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 836350389}
   mHiddenRoot: {fileID: 0}
-  mTargetName: RiddleQR
-  mDatasetName: Vuforia/IMTC_Lab3_Riddle.xml
+  mTargetName: qr_code_skull
+  mDatasetName: Vuforia/Lab3_Assignment_Final.xml
   mCastedBehaviour: {fileID: 836350389}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -1648,13 +1648,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: pxl_20241020_2109014372
+  mTrackableName: qr_code_ghost
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Lab3_Vuforia.xml
-  mAspectRatio: 1.257576
+  mDataSetPath: Vuforia/Lab3_Assignment_Final.xml
+  mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 2
-  mHeight: 2.515152
+  mHeight: 2
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -1690,8 +1690,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1345840843}
   mHiddenRoot: {fileID: 0}
-  mTargetName: pxl_20241020_2109014372
-  mDatasetName: Vuforia/Lab3_Vuforia.xml
+  mTargetName: qr_code_ghost
+  mDatasetName: Vuforia/Lab3_Assignment_Final.xml
   mCastedBehaviour: {fileID: 1345840843}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -2281,9 +2281,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: door-quest
+  mTrackableName: qr_code_door
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/DoorQuest.xml
+  mDataSetPath: Vuforia/Lab3_Assignment_Final.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 2
@@ -2324,8 +2324,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1977521019}
   mHiddenRoot: {fileID: 0}
-  mTargetName: door-quest
-  mDatasetName: Vuforia/DoorQuest.xml
+  mTargetName: qr_code_door
+  mDatasetName: Vuforia/Lab3_Assignment_Final.xml
   mCastedBehaviour: {fileID: 1977521019}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -2828,6 +2828,6 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 692675539}
   - {fileID: 799852636}
-  - {fileID: 1524284445}
   - {fileID: 1371088185}
+  - {fileID: 1524284445}
   - {fileID: 910168145}
