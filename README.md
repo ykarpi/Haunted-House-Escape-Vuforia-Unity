@@ -2,12 +2,15 @@
 This project is done as part of the Lab 3 assignment for IMTC 505 course.
 Unity 2022.3.45f1 is used along side with the Vuforia to create an AR application.
 
-// add some kind of pitch for the project & an image
+Project Setup:
+
 
 
  
 ## Description
 // add description here
+
+// add some kind of pitch for the project & an image
 
  ## Video Demo
 //add a youtube link
@@ -18,6 +21,7 @@ Unity 2022.3.45f1 is used along side with the Vuforia to create an AR applicatio
 - [Ghost Interaction](#ghost-interaction)
 - [Skull Riddle](#skull-riddle)
 - [Door & Key](#door-and-key)
+- [Future Works](#future-works)
 - [Main challenges](#main-challenges)
 - [Useful Tutorials](#useful-tutorials)
 
@@ -34,7 +38,10 @@ abc
 abc
 
 
-## Main challenges
+## Future Works
+// 
+
+## Main Challenges
 // add some reflection with what challenges we faced
 
 
