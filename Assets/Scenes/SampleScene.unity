@@ -787,7 +787,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1524284445}
+    m_TransformParent: {fileID: 836350386}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3c8dd414ac5394449a26d3fac21af42e, type: 3}
       propertyPath: m_LocalScale.x
@@ -1081,7 +1081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &825054455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,7 +1163,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 716686475}
   m_Father: {fileID: 1524284445}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &836350388
@@ -1756,7 +1757,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 716686475}
   - {fileID: 836350386}
   - {fileID: 1828027119}
   - {fileID: 2034882491}
