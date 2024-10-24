@@ -1,4 +1,4 @@
-# Lab 3 Assignment
+# IMTC Lab3 - Haunted House Escape!
 This project is done as part of the Lab 3 assignment for IMTC 505 course.
 Unity 2022.3.45f1 is used along side with the Vuforia to create an AR application.
 
