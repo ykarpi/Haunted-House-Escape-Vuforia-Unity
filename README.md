@@ -42,10 +42,15 @@ Our door interaction image target is the one which the user can use to escape. U
 
 
 ## Future Works
-// 
+Since the primary purpose of this implementation was learning, we see numerous possibilities for the future works that would transform our concept into a fully developed AR game. Some of the ideas include:
+- Develop a proper menu UI (start menu, options, exit, etc)
+- Organize our interactions as levels - for example, the player wouldn't be able to open the door (3rd interaction) before going through the ghost (1st interaction) and solving the skull's riddle (2nd interaction).
+- Add more interaction, sound effects, and animations.
+- Consider other options provided by Vuforia, like ground plane or mid air target placements, etc.
 
 ## Main Challenges
-// add some reflection with what challenges we faced
+- A
+- B
 
 
 ## Useful Tutorials:
