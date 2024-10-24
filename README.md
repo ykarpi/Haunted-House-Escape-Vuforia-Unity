@@ -11,7 +11,7 @@ Used assets:
 - ADD HERE the music assets too
  
 ## Description
-// add description here
+In this immersive experience, players are trapped in a haunted mansion and must interact with various cursed objects to find their way out. The first interaction occurs when the player scans a first mysterious ImageTarget, triggering a startling jump scare as a ghost unexpectedly appears. In the second encounter, a skull presents a riddle that players must solve. The final interaction reveals a door, behind which lies a key crucial to their escape. Upon retrieving the key, you can successful escape from the haunted mansion.
 
 // add some kind of pitch for the project & an image
 
@@ -23,7 +23,7 @@ Used assets:
 ## Table of Contents
 - [Ghost Interaction](#ghost-interaction)
 - [Skull Riddle](#skull-riddle)
-- [Door & Key](#door-and-key)
+- [Door & Key](#door-animation)
 - [Future Works](#future-works)
 - [Main challenges](#main-challenges)
 - [Useful Tutorials](#useful-tutorials)
@@ -34,11 +34,11 @@ The interaction marks the initial phase of the game. Once the AR camera detects 
 
 
 ## Skull Riddle
-abc
+On our second image target, a skull appears, with the text asking the user a riddle. The answer to our riddle is echo, and once the user gets the riddle correct, the text changes to inform the user that they’ve broken the skull’s curse, and the skull disappears. 
 
 
-## Door & Key
-abc
+## Door Animation
+Our door interaction image target is the one which the user can use to escape. Upon target detection, a door appears. When the user taps on the door, the door opens via an animation, and the sound changes to birds chirping, and some text appears in green, informing the user that they’ve escaped.  
 
 
 ## Future Works
