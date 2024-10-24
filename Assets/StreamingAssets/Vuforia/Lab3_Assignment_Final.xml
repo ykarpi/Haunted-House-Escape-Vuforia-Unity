@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="qr_code_door" size="2.000000 2.000000" />
+    <ImageTarget name="qr_code_skull" size="2.000000 2.000000" />
+    <ImageTarget name="qr_code_ghost" size="2.000000 2.000000" />
+  </Tracking>
+</QCARConfig>
