@@ -4,8 +4,11 @@ Unity 2022.3.45f1 is used along side with the Vuforia to create an AR applicatio
 
 Project Setup:
 
-
-
+Used assets:
+- [Ghost model](https://poly.pizza/m/Iip30bDHmu)
+- [Skull model](https://poly.pizza/m/EAsVEJwsv7)
+- [Door & Key](https://assetstore.unity.com/packages/tools/physics/interactive-physical-door-pack-163249)
+- ADD HERE the music assets too
  
 ## Description
 // add description here
@@ -27,7 +30,7 @@ Project Setup:
 
 
 ## Ghost Interaction
-abc
+The interaction marks the initial phase of the game. Once the AR camera detects the ImageTarget, a jump scare is triggered to startle the player. Furthermore, a "scaring" sound effect is added to provide a more realistic and immersive experience. The jump scare implementation is achieved by displaying a nearly full-screen image of the ghost asset on Canvas in a 2D plane. However, after 3 seconds, the jump scare fades, and the 3D model of the ghost is rendered in AR whenever the ImageTarget is detected. Additionally, as the player moves, the ghost model will continuously follow and remain oriented towards the player.  
 
 
 ## Skull Riddle
