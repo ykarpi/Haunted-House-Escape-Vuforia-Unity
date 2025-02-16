@@ -1,4 +1,7 @@
 # Haunted House Escape!
+
+Contributors: [Yehor Karpichev](https://github.com/ykarpi), [Alex Deaconu](https://github.com/Al20vortex), [Dina El-kholy](https://github.com/dina-adel).
+
 The augmented reality application for Android - the project is done as part of the Lab 3 assignment for IMTC 505 course.
 Unity 2022.3.45f1 is used along side with the Vuforia to create an AR application.
 
